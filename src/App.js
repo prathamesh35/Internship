@@ -1,36 +1,61 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
+import About from './components/About';
+import Contact from './components/Contact';
+import User from './components/User';
+import RegistrationForm from './components/RegistrationForm';
+import './App.css';
 
-let name = "Komal";
+import RohitPic from './Images/Rohit_pic.jpg';
+import ViratPic from './Images/Virat_pic.jpg';
+import DhoniPic from './Images/Dhoni_pic.jpg';
+import SachinPic from './Images/Sachin_pic.jpg';
+
+
 function App() {
+  const users = [
+    { id: 'rohit', name: 'Rohit Sharma', email: 'rohit45@email.com', contact: 7558515246, img: RohitPic },
+    { id: 'virat', name: 'Virat Kohli', email: 'virat18@email.com', contact: 7558515247, img: ViratPic },
+    { id: 'dhoni', name: 'M S Dhoni', email: 'dhoni7@email.com', contact: 7558515248, img: DhoniPic },
+    { id: 'sachin', name: 'Sachin Tendulkar', email: 'sachin10@email.com', contact: 7558515249, img: SachinPic }
+  ];
+
+  const [showRegistration, setShowRegistration] = useState(true);
+
+  const handleCloseRegistration = () => {
+    setShowRegistration(false);
+  };
+  
   return (
-    <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="/">MyWeb</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/">About</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/">Contact</a>
-        </li>
-      </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<>
+<div className="app-container">
+      {showRegistration && (
+        <div className="registration-modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseRegistration}>
+              &times;
+            </span>
+            <RegistrationForm />
+          </div>
+        </div>
+      )}
+          <Router>
+    <Navbar users={users} title="PK" aboutText="About us" />
+    <div className="container my-3">
+      <Routes>
+        <Route exact path="/" element={<TextForm heading="Enter your text below" />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/users/:id" element={<User users={users} />} />
+      </Routes>
     </div>
-  </div>
-</nav>
-    </>
+  </Router>
+
+    </div>
+
+  </>
   );
 }
 

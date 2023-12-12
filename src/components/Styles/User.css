@@ -1,0 +1,42 @@
+.user-container {
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #dbfbd2;
+    border: 4px solid rgba(102, 255, 0, 0.727);
+  }
+  
+  .user-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: fill;
+    margin-bottom: 20px;
+    border: 2px solid aqua;
+  }
+
+  .my-image {
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    margin-bottom: 20px;
+    border: 2px solid black;
+  }
+  
+  .user-details {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .user-email {
+    color: #555;
+  }
+  
+  .user-not-found {
+    color: #ff0000;
+  }

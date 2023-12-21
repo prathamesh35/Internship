@@ -1,0 +1,23 @@
+[33mcommit c546e15b7fe17df01a66708a8a1e287c0d572189[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Prathamesh Krushnat Kumbhar <prathameshkumbhar035@gmail.com>
+Date:   Thu Dec 21 16:40:41 2023 +0530
+
+    Updating fetched data from json file
+
+[33mcommit 2bdc74c18d87003834eba1065dc08acfeca28093[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmain[m[33m)[m
+Author: Prathamesh Krushnat Kumbhar <prathameshkumbhar035@gmail.com>
+Date:   Tue Dec 12 09:49:50 2023 +0530
+
+    phaseI
+
+[33mcommit 010b4b8ea3efe7add5011fb0bf7935d65014d741[m
+Author: Prathamesh Krushnat Kumbhar <prathameshkumbhar035@gmail.com>
+Date:   Sat Nov 4 17:22:57 2023 +0530
+
+    Project phase1
+
+[33mcommit 98f8b0085920a301275dbda0ea13dcb6b2e1659a[m
+Author: Prathamesh Krushnat Kumbhar <prathameshkumbhar035@gmail.com>
+Date:   Wed Nov 1 14:04:29 2023 +0530
+
+    Initialize project using Create React App

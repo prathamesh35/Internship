@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Rohit Sharma",
+      "email": "rohit45@email.com",
+      "contact": "7558515246",
+      "img": "https://cdn.zeebiz.com/sites/default/files/2020/03/31/115350-rohit-sharma-reuters.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Virat Kohli",
+      "email": "virat18@email.com",
+      "contact": 7558515247,
+      "img": "https://wallpapercave.com/wp/wp4051774.jpg"
+    },
+    {
+      "id": "3",
+      "name": "M S Dhoni",
+      "email": "dhoni7@email.com",
+      "contact": 7558515248,
+      "img": "https://i.pinimg.com/originals/f1/e6/ca/f1e6ca9105129b19b0f0636b60992041.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Sachin Tendulkar",
+      "email": "sachin10@email.com",
+      "contact": 7558515249,
+      "img": "http://2.bp.blogspot.com/-Z8KFf0X2Pfk/UoinDbQ0oRI/AAAAAAAAS6M/QA3CJ0NVfks/s1600/+Sachin+Tendulkar+HD+Photos+(5).jpg"
+    },
+    {
+      "id": "5",
+      "name": "Jasprit Bumrah",
+      "email": "bumrah93@email.com",
+      "contact": 7558515250,
+      "img": "https://image.crictracker.com/wp-content/uploads/2021/08/Jasprit-Bumrah-3.jpg"
+    }
+  ]
+}

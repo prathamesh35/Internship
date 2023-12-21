@@ -31,7 +31,7 @@ export default function Navbar({
             </Link>
             <ul className="dropdown-menu">
              {users.map((user) => (
-              <li key={user._id}>
+              <li key={user.id}>
                 <Link className="dropdown-item" to={`/users/${user.id}`}>
                   {user.name}    
                 </Link>

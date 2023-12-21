@@ -1,6 +1,6 @@
 .user-container {
     max-width: 500px;
-    height: 400px;
+    height: 550px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
@@ -9,7 +9,9 @@
     background-color: #dbfbd2;
     border: 4px solid rgba(102, 255, 0, 0.727);
   }
-  
+#user-con{
+  height: 400px;
+}
   .user-image {
     width: 200px;
     height: 200px;
@@ -40,3 +42,17 @@
   .user-not-found {
     color: #ff0000;
   }
+/* 
+  .myButton{
+    color:black;
+    background-color: cyan;
+    font-size: large;
+    border: 5px solid cyan;
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+  }
+
+  .myButton:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan;
+  } */

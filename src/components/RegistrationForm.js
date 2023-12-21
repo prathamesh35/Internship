@@ -1,75 +1,35 @@
 import React, { useState } from 'react';
 
-const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
+const RegistrationForm = ({ onRegister }) => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleRegistration = () => {
-    // Save registration information to localStorage
-    saveRegistrationInfo(formData);
-
-    alert('Registration successful!');
-
-    // You can redirect or perform any other actions here
-  };
-
-  const saveRegistrationInfo = (userInfo) => {
-    // Retrieve existing data from localStorage or initialize an empty array
-    const existingData = JSON.parse(localStorage.getItem('registrationData')) || [];
-
-    // Add new user information to the array
-    existingData.push(userInfo);
-
-    // Save the updated array back to localStorage
-    localStorage.setItem('registrationData', JSON.stringify(existingData));
+  const handleRegister = () => {
+  
+    const userData = { username, email, password };
+    onRegister(userData);
   };
 
   return (
     <div>
-      <label htmlFor="username">Username:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        value={formData.username}
-        onChange={handleInputChange}
-        required
-      />
-
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleInputChange}
-        required
-      />
-
-      <label htmlFor="password">Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        value={formData.password}
-        onChange={handleInputChange}
-        required
-      />
-
-      <button type="button" onClick={handleRegistration}>
-        Register
-      </button>
+      <h2>Registration Form</h2>
+      <label>
+        Username:
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Password:
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      </label>
+      <br />
+      <button onClick={handleRegister}>Register</button>
     </div>
   );
 };
